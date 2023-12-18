@@ -30,11 +30,11 @@ Display a success message indicating that the process has been completed success
 ## Example Usage:
 **For prod.sh:**
 ```
-./prod.sh https://github.com/username/my-webpage.git /path/to-nginx-linked-volume-with-webpage
+./prod.sh https://github.com/username/my-webpage /path/to-nginx-linked-volume-with-webpage
 ```
 **For dev.sh:**
 ```
-./dev.sh https://github.com/username/my-webpage.git /path/to-nginx-linked-volume-with-webpage
+./dev.sh https://github.com/username/my-webpage /path/to-nginx-linked-volume-with-webpage
 ```
 
 '<GitHub_Repo_Link>': The link to the GitHub repository you want to sync.
