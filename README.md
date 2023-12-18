@@ -13,9 +13,10 @@ This script is designed to synchronize files from a GitHub repository with a Doc
 ## Workflow
 **Check Arguments:**
 Usage:
-``./sync_github_to_nginx.sh <GitHub_Repo_Link> <Global_Path_to_Directory>`
+```
+./sync_github_to_nginx.sh <GitHub_Repo_Link> <Global_Path_to_Directory>
+```
 **Directory Check:**
-
 Check if the specified directory exists.
 If it exists, delete its contents.
 If it doesn't exist, create the directory.
