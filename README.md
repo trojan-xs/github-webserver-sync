@@ -12,7 +12,6 @@ This script is designed to synchronize files from a GitHub repository with a Doc
 
 ## Workflow
 **Check Arguments:**
-Usage:
 ```
 ./sync_github_to_nginx.sh <GitHub_Repo_Link> <Global_Path_to_Directory>
 ```
