@@ -12,18 +12,19 @@ directory_path="$2"
 
 # Check if the directory exists
 if [ -d "$directory_path" ]; then
-    # Directory exists, delete its contents
-    echo "Directory exists. Deleting contents..."
-    find "$directory_path" -mindepth 1 -delete
-else
-    # Directory does not exist, create it
-    echo "Creating directory..."
-    mkdir -p "$directory_path"
-fi
+    # Directory exists, navigate to it
+    cd "$directory_path" || exit
 
-# Clone the GitHub repo into the directory
-echo "Cloning GitHub repo into the directory..."
-git clone "$github_repo" "$directory_path"
+    # Use git to fetch and apply changes
+    echo "Updating existing repository..."
+    git fetch --all
+    git reset --hard origin/main  # Change 'main' to your branch if different
+    git pull origin main  # Change 'main' to your branch if different
+else
+    # Directory does not exist, clone the GitHub repo
+    echo "Creating directory and cloning GitHub repo..."
+    git clone "$github_repo" "$directory_path"
+fi
 
 echo "Process completed successfully."
 
