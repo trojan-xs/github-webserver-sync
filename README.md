@@ -1,5 +1,5 @@
 # github-webserver-sync
-super inefficient webserver sync to github linux bash script
+
 
 ## Overview
 This script is designed to synchronize files from a GitHub repository with a Docker Nginx web server. It provides a convenient way to update the contents of a specified directory with the latest version of a GitHub repository.
@@ -28,10 +28,6 @@ Display a success message indicating that the process has been completed success
 
 
 ## Example Usage:
-**For prod.sh:**
-```
-./prod.sh https://github.com/username/my-webpage /path/to-nginx-linked-volume-with-webpage
-```
 **For dev.sh:**
 ```
 ./dev.sh https://github.com/username/my-webpage /path/to-nginx-linked-volume-with-webpage
